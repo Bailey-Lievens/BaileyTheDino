@@ -17,3 +17,11 @@ errors:
     title:                      404 Page <br> not found
     fix:                        Ah yes the classic 404 page. Click <a target="_blank" href="https://youtu.be/jEB2k6Hs0AY">here</a> or press alt + f4 to fix this error.
     redirect:                   Would you prefer to go back to homepage? <a href="/">click here!</a>
+
+admin:
+  title:                        So secret
+  login:
+    title:                      Secret login
+    username:                   Username
+    password:                   Password
+    submit:                     Submit

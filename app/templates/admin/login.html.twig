@@ -1,0 +1,30 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}{{ 'admin.login.title'|trans }}{% endblock %}
+
+{% block body_classes %}
+    class="body-login"
+{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div class="error-wrapper">
+            {{ dump(error) }}
+        </div>
+    {% endif %}
+
+    <form id="loginForm" method="post">
+        <label for="inputUsername">{{ 'admin.login.username'|trans }}</label>
+        <input type="text" name="username" id="inputUsername" autocomplete="username" required autofocus>
+        <label for="inputPassword">{{ 'admin.login.password'|trans }}</label>
+        <input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
+
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
+        <button type="submit">
+            {{ 'admin.login.submit'|trans }}
+        </button>
+    </form>
+{% endblock %}

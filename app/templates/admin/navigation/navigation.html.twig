@@ -1,0 +1,11 @@
+{% block navigation %}
+    {% set currentRoute = app.request.get('_route') %}
+
+    <nav class="navigation" data-controller="navigation">
+        <a id="websiteLogo" href="{{ path('frontend_index') }}">{{ 'base.title'|trans }}</a>
+
+        {% include './navigation/components/desktop-navigation.html.twig' %}
+
+        {% include './navigation/components/mobile-navigation.html.twig' %}
+    </nav>
+{% endblock %}
