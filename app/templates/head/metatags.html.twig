@@ -1,0 +1,24 @@
+{% block metatags %}
+
+    {% block base_tags %}
+        <meta name="title" content="{{ 'metatags.title'|trans }}">
+        <meta name="description" content="{{ 'metatags.description'|trans }}">
+    {% endblock %}
+
+    {% block facebook_tags %}
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ url('frontend_index') }}">
+        <meta property="og:title" content="{{ 'metatags.title'|trans }}">
+        <meta property="og:description" content="{{ 'metatags.description'|trans }}">
+        <meta property="og:image" content="{{ asset('build/images/metatag.jpg') }}">
+    {% endblock %}
+
+    {% block twitter_tags %}
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="{{ url('frontend_index') }}">
+        <meta property="twitter:title" content="{{ 'metatags.title'|trans }}">
+        <meta property="twitter:description" content="{{ 'metatags.description'|trans }}">
+        <meta property="twitter:image" content="{{ asset('build/images/metatag.jpg') }}">
+    {% endblock %}
+
+{% endblock %}

@@ -1,4 +1,16 @@
+// normalize
+@import './scss/normalize';
+
+// fonts
+@import './scss/fonts/roboto';
+
+// default styling
 @import './variables.scss';
 @import './base.scss';
 
-@import './scss/example.scss';
+// navigation
+@import './scss/navigation/navigation';
+
+// index specific
+@import './scss/index/index';
+@import './scss/index/icons';

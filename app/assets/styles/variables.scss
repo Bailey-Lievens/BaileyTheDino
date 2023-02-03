@@ -1,12 +1,23 @@
-
-$primaryFontFamily: sans-serif;
-$secondaryFontFamily: sans-serif;
+$primaryFontFamily: Roboto;
+$primaryFontWeight: normal;
+$primaryFontStyle: normal;
 
 $primaryColor: #BCB6FF;
 $secondaryColor: #A9FFF7;
 
-$black: #000C14;
-$white: #ECEBFF;
+$black: #121212;
+$white: #F6F6F6;
 
 $backgroundColor: $white;
 $textColor: $black;
+
+$defaultTransition: .1s ease-in-out;
+
+$tabletBreakPoint: 700px;
+$mobileBreakPoint: 500px;
+
+// index icon sizes
+$smallIconSize: 10px;
+$mediumIconWidth: 20px;
+$largeIconWidth: 30px;
+$extraLargeIconWidth: 40px;

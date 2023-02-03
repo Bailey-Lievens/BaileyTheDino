@@ -1,0 +1,86 @@
+.navigation {
+  width: 100vw;
+  height: 36px;
+  background-color: $backgroundColor;
+
+  position: fixed;
+  top: 0;
+
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .active-nav {
+    text-decoration: line-through;
+    text-decoration-color: $textColor;
+  }
+
+  .hamburger-wrapper {
+    position: relative;
+    right: 40px;
+
+    cursor: pointer;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .hamburger {
+      background-color: $textColor;
+      height: 3px;
+      width: 30px;
+
+      transition: $defaultTransition;
+
+    }
+
+    .hamburger-1 {
+      margin-top: 1.5px;
+    }
+
+    .hamburger-2 {
+      margin-top: -1.5px;
+    }
+  }
+
+  .mobile-navigation {
+    .mobile-navigation-links {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      right: -250px;
+      margin-top: 10px;
+      padding-right: 100px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+
+      background-color: $backgroundColor;
+
+      transition: 0.2s ease-out;
+    }
+
+    @media (min-width: $tabletBreakPoint) {
+      display: none;
+    }
+  }
+
+  .desktop-navigation {
+    display: none;
+
+    @media (min-width: $tabletBreakPoint) {
+      display: flex;
+      gap: .2rem;
+
+      margin-right: 40px;
+    }
+  }
+}
+

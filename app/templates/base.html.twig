@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            {% block title %}Default{% endblock %}
+            {% block title %}
+                {{ 'base.title'|trans }}
+            {% endblock %}
         </title>
 
         {% block favicon %}
-            <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+            <link id="favicon" rel="icon" type="image/svg+xml" href="{{ asset('build/images/favicon.svg') }}">
         {% endblock %}
 
-        {% block metatags %}
-        {% endblock %}
+        {% include './head/metatags.html.twig' %}
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -21,9 +22,13 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body data-controller="consoleMessage" {% block body_classes %}{% endblock %} {% block body_attributes %}{% endblock %}>
         {% block body %}
-            default
+            {% include './navigation/navigation.html.twig' %}
+
+            {% block body_content %}
+            {% endblock %}
+
         {% endblock %}
     </body>
 </html>

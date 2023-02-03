@@ -1,0 +1,86 @@
+.icon {
+  width: $largeIconWidth;
+  height: $largeIconWidth;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  border: solid transparent 2px;
+  padding: .2rem;
+
+  transition: $defaultTransition;
+
+  @media (min-width: $mobileBreakPoint) {
+    width: $extraLargeIconWidth;
+    height: $extraLargeIconWidth;
+  }
+
+  &:hover {
+    border: solid $textColor 2px;
+    background-color: $backgroundColor;
+  }
+}
+
+.active-icon {
+  border: solid $textColor 2px;
+  background-color: $backgroundColor;
+}
+
+#trashIcon {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.brush-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  #smallIcon {
+    width: $smallIconSize;
+    height: $smallIconSize;
+
+    @media (min-width: $mobileBreakPoint) {
+      width: $mediumIconWidth;
+      height: $mediumIconWidth;
+    }
+  }
+
+  #mediumIcon {
+    width: $mediumIconWidth;
+    height: $mediumIconWidth;
+
+    @media (min-width: $mobileBreakPoint) {
+      width: $largeIconWidth;
+      height: $largeIconWidth;
+    }
+  }
+}
+
+.option-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .2rem;
+
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $mobileBreakPoint) {
+    gap: 1rem;
+  }
+
+  #brushIcon {
+    width: auto;
+    padding-left: 11.2px;
+    padding-right: 11.2px;
+  }
+}

@@ -1,10 +1,29 @@
 {% extends "base.html.twig" %}
 
-{% block title %}
-    Hello world!
-{% endblock title %}
+{% block body_classes %}
+    id="capture" class="index-body"
+{% endblock %}
 
-{% block body %}
-    <h1 data-controller="example" >Hello world</h1>
-    <img src="{{ asset('build/images/art_vandelay.jpg') }}" alt="Art Vandelay">
-{% endblock body %}
+{% block body_attributes %}
+    scroll="no"
+{% endblock %}
+
+{% block body_content %}
+    <div class="canvas-wrapper" data-controller="canvas">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <img class="icon" id="trashIcon" src="{{ asset('build/images/icons/trash.webp') }}" alt="trash icon">
+
+    <div class="brush-wrapper">
+        <img class="icon" id="smallIcon" src="{{ asset('build/images/icons/smallBrush.webp') }}" alt="small brush icon" data-size="small">
+        <img class="icon active-icon" id="mediumIcon" src="{{ asset('build/images/icons/mediumBrush.webp') }}" alt="medium brush icon" data-size="medium">
+        <img class="icon" id="bigIcon" src="{{ asset('build/images/icons/bigBrush.webp') }}" alt="large brush icon" data-size="big">
+    </div>
+
+    <div class="option-wrapper">
+        <img class="icon active-icon" id="brushIcon" src="{{ asset('build/images/icons/brush.webp') }}" alt="brush icon" data-option="brush">
+        <img class="icon" id="eraserIcon" src="{{ asset('build/images/icons/eraser.webp') }}" alt="eraser icon" data-option="eraser">
+        <img class="icon" id="saveIcon" src="{{ asset('build/images/icons/save.webp') }}" alt="save icon">
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+base:
+  title:                        BaileyTheDino
+
+navigation:
+  about:                        About
+  project:                      Project
+  blog:                         Blog
+  contact:                      Contact
+
+metatags:
+  title:                        BaileyTheDino
+  description:                  All round developer and gadget enthousiast. Come over and check out my projects and blogs!

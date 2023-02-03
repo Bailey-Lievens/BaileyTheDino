@@ -1,0 +1,30 @@
+{% block mobile_navigation %}
+    <div class="mobile-navigation">
+        <div class="hamburger-wrapper">
+            <div class="hamburger hamburger-1"></div>
+            <div class="hamburger hamburger-2"></div>
+        </div>
+
+        <div class="mobile-navigation-links">
+            <a href="{{ path('frontend_about') }}"
+               class="{% if currentRoute == 'frontend_about' %}active-nav{% endif %}"
+            >
+                {{ 'navigation.about'|trans }},
+            </a>
+
+            <a href="{{ path('frontend_projects') }}"
+               class="{% if currentRoute == 'frontend_projects' %}active-nav{% endif %}"
+            >
+                {{ 'navigation.project'|trans }},
+            </a>
+
+            <a href="{{ path('frontend_blogs') }}"
+               class="{% if currentRoute == 'frontend_blogs' %}active-nav{% endif %}"
+            >
+                {{ 'navigation.blog'|trans }},
+            </a>
+
+            <a href="mailto:hello@baileylievens.be">{{ 'navigation.contact'|trans }}</a>
+        </div>
+    </div>
+{% endblock %}
