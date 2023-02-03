@@ -18,6 +18,10 @@ html {
       background-color: $textColor;
     }
 
+    p {
+      font-size: $defaultBodyTextSize;
+    }
+
     i {
       font-style: italic;
     }
@@ -36,6 +40,10 @@ html {
         text-decoration: line-through;
         text-decoration-color: $textColor;
       }
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-size: $defaultHeaderTextSize;
     }
   }
 }

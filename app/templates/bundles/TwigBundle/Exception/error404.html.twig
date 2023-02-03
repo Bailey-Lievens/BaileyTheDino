@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {{ 'errors.404.pageTitle'|trans }}
+{% endblock %}
+
+{% block body_classes %}
+    class="body-404"
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'errors.404.title'|trans|raw }}</h1>
+    <p>{{ 'errors.404.fix'|trans|raw }}</p>
+    <br>
+    <p>{{ 'errors.404.redirect'|trans|raw }}</p>
+{% endblock %}
