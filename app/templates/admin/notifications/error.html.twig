@@ -1,0 +1,8 @@
+{% block notification_error %}
+    {% if notification %}
+        <div class="error-wrapper" data-controller="errorMessage">
+            <p>{{ notification }}</p>
+            <button class="error-close">x</button>
+        </div>
+    {% endif %}
+{% endblock %}

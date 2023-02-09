@@ -1,0 +1,30 @@
+.error-wrapper {
+  background-color: $backgroundColor;
+  color: $textColor;
+
+  position: absolute;
+  top: 0;
+
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+  border-left: solid $errorColor 10px;
+
+  transition: $defaultTransitionIn;
+
+  @media (min-width: $desktopBreakPoint) {
+    max-width: 1120px;
+  }
+
+  .error-close {
+    border: unset;
+    background-color: unset;
+    cursor: pointer;
+    font-size: $defaultBodyTextSize;
+  }
+}

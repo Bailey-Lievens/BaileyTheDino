@@ -1,27 +1,31 @@
 base:
-  title:                        BaileyTheDino
+  title:                        'BaileyTheDino'
 
 navigation:
-  about:                        About
-  project:                      Project
-  blog:                         Blog
-  contact:                      Contact
+  about:                        'About'
+  project:                      'Project'
+  blog:                         'Blog'
+  contact:                      'Contact'
 
 metatags:
-  title:                        BaileyTheDino
-  description:                  All round developer and gadget enthusiast. Come over and check out my projects and blogs!
+  title:                        'BaileyTheDino'
+  description:                  'All round developer and gadget enthusiast. Come over and check out my projects and blogs!'
 
 errors:
   404:
-    pageTitle:                  404 404 404 404 404 404 404 404
-    title:                      404 Page <br> not found
-    fix:                        Ah yes the classic 404 page. Click <a target="_blank" href="https://youtu.be/jEB2k6Hs0AY">here</a> or press alt + f4 to fix this error.
-    redirect:                   Would you prefer to go back to homepage? <a href="/">click here!</a>
+    pageTitle:                  '404 404 404 404 404 404 404 404'
+    title:                      '404 Page <br> not found'
+    fix:                        'Ah yes the classic 404 page. Click <a target="_blank" href="https://youtu.be/jEB2k6Hs0AY">here</a> or press alt + f4 to fix this error.'
+    redirect:                   'Would you prefer to go back to homepage? <a href="/">click here!</a>'
 
 admin:
-  title:                        So secret
+  title:                        'So secret'
   login:
-    title:                      Secret login
-    username:                   Username
-    password:                   Password
-    submit:                     Submit
+    title:                      'Secret login'
+    formTitle:                  'Access The mainframe'
+    username:                   'Username'
+    usernamePlaceholder:        'Enter your username'
+    password:                   'Password'
+    passwordPlaceholder:        'Enter your password'
+    submit:                     'Log in'
+    quoteWriterPrefix:          'Quote by: '

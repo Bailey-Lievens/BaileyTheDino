@@ -21,6 +21,11 @@
     {% endblock %}
 </head>
 <body {% block body_classes %}{% endblock %}>
+
+{% if error %}
+    {% include './admin/notifications/error.html.twig' with {'notification': error.message} only %}
+{% endif %}
+
 {% block body %}
     {% include './admin/navigation/navigation.html.twig' %}
 

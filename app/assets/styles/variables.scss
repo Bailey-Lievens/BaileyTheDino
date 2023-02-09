@@ -1,9 +1,11 @@
 $primaryFontFamily: Roboto;
-$primaryFontWeight: normal;
+$primaryFontWeight: 400;
 $primaryFontStyle: normal;
 
-$primaryColor: #BCB6FF;
-$secondaryColor: #A9FFF7;
+$primaryColor: #FFF561;
+$primaryColorSaturated: #fff11b;
+
+$errorColor: #ff5a5a;
 
 $black: #121212;
 $white: #F6F6F6;
@@ -12,12 +14,21 @@ $backgroundColor: $white;
 $textColor: $black;
 
 $defaultTransition: .1s ease-in-out;
+$defaultTransitionOut: .1s ease-out;
+$defaultTransitionIn: .1s ease-in;
 
 $defaultHeaderTextSize: 3rem;
 $defaultBodyTextSize: 1rem;
 
+$defaultBorderRadius: 10px;
+$defaultBorderWidth: 1px;
+
+$desktopBreakPoint: 1200px;
 $tabletBreakPoint: 700px;
 $mobileBreakPoint: 500px;
+
+$fontWeightBold: 600;
+$fontWeightLight: 300;
 
 // index icon sizes
 $smallIconSize: 10px;

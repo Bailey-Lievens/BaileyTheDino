@@ -8,5 +8,9 @@
 @import './variables.scss';
 @import './base.scss';
 
+// general
+@import './admin-scss/general-admin';
+@import './admin-scss/notifications/error';
+
 // login
 @import './admin-scss/login';
