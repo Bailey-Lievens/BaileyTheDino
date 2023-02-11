@@ -1,11 +1,35 @@
 {% block navigation %}
     {% set currentRoute = app.request.get('_route') %}
 
-    <nav class="navigation" data-controller="navigation">
-        <a id="websiteLogo" href="{{ path('frontend_index') }}">{{ 'base.title'|trans }}</a>
+    <nav class="navigation">
+        <a href="{{ path('backend_index') }}" {% if currentRoute == 'backend_index' %}class="active-nav"{% endif %}">
+            <img class="mobile-icon" src="{{ asset('build/images/admin/icons/home.svg') }}" alt="home icon">
+            <img class="desktop-icon" src="{{ asset('build/images/admin/icons/homeDesktop.svg') }}" alt="home icon">
+        </a>
 
-        {% include './navigation/components/desktop-navigation.html.twig' %}
+        <a href="{{ path('backend_project') }}" {% if currentRoute == 'backend_project' %}class="active-nav"{% endif %}>
+            <img class="mobile-icon" src="{{ asset('build/images/admin/icons/project.svg') }}" alt="project icon">
+            <img class="desktop-icon" src="{{ asset('build/images/admin/icons/projectDesktop.svg') }}" alt="project icon">
+        </a>
 
-        {% include './navigation/components/mobile-navigation.html.twig' %}
+        <a href="{{ path('backend_blog') }}" {% if currentRoute == 'backend_blog' %}class="active-nav"{% endif %}>
+            <img class="mobile-icon" src="{{ asset('build/images/admin/icons/blog.svg') }}" alt="blog icon">
+            <img class="desktop-icon" src="{{ asset('build/images/admin/icons/blogDesktop.svg') }}" alt="blog icon">
+        </a>
+
+        <a href="{{ path('backend_quote') }}" {% if currentRoute == 'backend_quote' %}class="active-nav"{% endif %}>
+            <img class="mobile-icon" src="{{ asset('build/images/admin/icons/quote.svg') }}" alt="quote icon">
+            <img class="desktop-icon" src="{{ asset('build/images/admin/icons/quoteDesktop.svg') }}" alt="quote icon">
+        </a>
+
+        <a href="{{ path('backend_category') }}" {% if currentRoute == 'backend_category' %}class="active-nav"{% endif %}>
+            <img class="mobile-icon" src="{{ asset('build/images/admin/icons/category.svg') }}" alt="category icon">
+            <img class="desktop-icon" src="{{ asset('build/images/admin/icons/categoryDesktop.svg') }}" alt="category icon">
+        </a>
+
+        <a href="{{ path('backend_account') }}" {% if currentRoute == 'backend_category' %}class="active-nav"{% endif %}>
+            <img class="mobile-icon" src="{{ asset('build/images/admin/icons/account.svg') }}" alt="account icon">
+            <img class="desktop-icon" src="{{ asset('build/images/admin/icons/accountDesktop.svg') }}" alt="account icon">
+        </a>
     </nav>
 {% endblock %}

@@ -22,15 +22,19 @@
 </head>
 <body {% block body_classes %}{% endblock %}>
 
-{% if error %}
+{% if error is defined and error is not null %}
     {% include './admin/notifications/error.html.twig' with {'notification': error.message} only %}
 {% endif %}
 
 {% block body %}
-    {% include './admin/navigation/navigation.html.twig' %}
+    <header>
+        {% include './admin/navigation/navigation.html.twig' %}
+    </header>
 
-    {% block body_content %}
-    {% endblock %}
+    <main>
+        {% block body_content %}
+        {% endblock %}
+    </main>
 
 {% endblock %}
 </body>

@@ -1,7 +1,16 @@
 .body-admin {
-  background-color: $textColor;
-  background-image: url("../../images/admin/admin-background.svg");
+  background-color: $backgroundColor;
 
   height: 100vh;
   width: 100vw;
+
+  @media (min-width:$desktopBreakPoint) {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr;
+  }
+
+  main {
+    padding: 2rem;
+  }
 }

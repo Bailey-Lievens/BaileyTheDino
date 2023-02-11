@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image:  url("../../images/admin/admin-background.svg");
+  background-color: $textColor;
 
   * {
     color: $textColor;

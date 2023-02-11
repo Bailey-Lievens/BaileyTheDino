@@ -1,0 +1,107 @@
+.navigation {
+  background-image:  url("../../../images/admin/admin-background.svg");
+  background-color: $textColor;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: $desktopBreakPoint) {
+    position: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 100%;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+  a {
+    position: relative;
+
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+
+      @media (min-width: $desktopBreakPoint) {
+        width: 35px;
+        height: 35px;
+      }
+
+      padding: 1rem .5rem 1rem .5rem;
+    }
+
+    .mobile-icon {
+      display: inline;
+    }
+
+    .desktop-icon {
+      display: none;
+    }
+
+    @media (min-width: $desktopBreakPoint) {
+      &:last-of-type {
+        margin-top: auto;
+      }
+
+      .mobile-icon {
+        display: none;
+      }
+
+      .desktop-icon {
+        display: inline;
+
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        content: url("../../../images/admin/icons/selected.svg");
+        position: absolute;
+        left: .5rem;
+        bottom: .4rem;
+
+        @media (min-width: $desktopBreakPoint) {
+          width: 50px;
+          overflow-x: hidden;
+          content: url("../../../images/admin/icons/selectedDesktop.svg");
+        }
+      }
+    }
+  }
+
+  .active-nav {
+
+    &::after {
+      content: url("../../../images/admin/icons/selected.svg");
+      position: absolute;
+      left: .5rem;
+      bottom: .4rem;
+
+      @media (min-width: $desktopBreakPoint) {
+        width: 50px;
+        overflow-x: hidden;
+        content: url("../../../images/admin/icons/selectedDesktop.svg");
+      }
+    }
+  }
+}
+
+.mobile-navigation {
+
+}
