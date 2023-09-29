@@ -19,6 +19,10 @@ Encore
         config.corejs = '3.23';
     })
     .enableSassLoader()
+    .copyFiles({
+        from: './assets/images',
+        to: 'images/[path][name].[ext]',
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

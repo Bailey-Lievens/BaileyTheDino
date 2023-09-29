@@ -5,6 +5,7 @@
         "@symfony/webpack-encore": "^4.4.0",
         "core-js": "^3.23.0",
         "dotenv": "^16.3.1",
+        "file-loader": "^6.2.0",
         "regenerator-runtime": "^0.13.9",
         "sass": "^1.68.0",
         "sass-loader": "^13.3.2",

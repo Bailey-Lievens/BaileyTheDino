@@ -1,3 +1,5 @@
-// Styles
+// Style
+import './styles/base.scss';
 
-import './styles/variables.scss';
+// Js
+import './scripts/navigation';
