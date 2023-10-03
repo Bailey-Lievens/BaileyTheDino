@@ -10,8 +10,18 @@ a {
 
   margin: 0;
   padding: 0;
+
+  &::after {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-body {
+::selection {
+  background-color: $offBlack;
+  color: $offWhite;
+}
+
+html, body {
   background-color: $offWhite;
 }

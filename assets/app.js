@@ -2,4 +2,5 @@
 import './styles/base.scss';
 
 // Js
-import './scripts/navigation';
+import './scripts/visitor/header/navigation';
+import './scripts/visitor/index/canvas';
