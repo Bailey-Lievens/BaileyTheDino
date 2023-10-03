@@ -1,14 +1,41 @@
 {% block header %}
+
+    {% set currentRoute = app.request.attributes.get('_route') %}
     <nav>
         <div class="logo">
-            <a href="#">BaileyTheDino</a>
+            <a href="{{ path('visitor.index') }}">{{ 'baileythedino.general.websiteName'|trans }}</a>
         </div>
 
         <div class="desktop-links">
-            <a href="#">About,</a>
-            <a href="#">Work,</a>
-            <a href="#">Blog,</a>
-            <a href="#">Contact</a>
+            <a
+                    href="{{ path('visitor.about') }}"
+                    {% if app.request.attributes.get( '_route' ) starts with 'visitor.about' %}
+                        class="active-link"
+                    {% endif %}
+            >
+                {{ 'baileythedino.general.navigation.about'|trans }},
+            </a>
+            <a
+                    href="{{ path('visitor.work.listing') }}"
+                    {% if app.request.attributes.get( '_route' ) starts with 'visitor.work' %}
+                        class="active-link"
+                    {% endif %}
+            >
+                {{ 'baileythedino.general.navigation.work'|trans }},
+            </a>
+            <a
+                    href="{{ path('visitor.blog.listing') }}"
+                    {% if app.request.attributes.get( '_route' ) starts with 'visitor.blog' %}
+                        class="active-link"
+                    {% endif %}
+            >
+                {{ 'baileythedino.general.navigation.blog'|trans }},
+            </a>
+            <a
+                    href="mailto:baileylievens@hotmail.com"
+            >
+                {{ 'baileythedino.general.navigation.contact'|trans }}
+            </a>
         </div>
 
         <div class="mobile-links">
@@ -18,10 +45,35 @@
             </div>
 
             <div class="mobile-navigation-links">
-                <a href="#">About,</a>
-                <a href="#">Work,</a>
-                <a href="#">Blog,</a>
-                <a href="#">Contact</a>
+                <a
+                        href="{{ path('visitor.about') }}"
+                        {% if app.request.attributes.get( '_route' ) starts with 'visitor.about' %}
+                            class="active-link"
+                        {% endif %}
+                >
+                    {{ 'baileythedino.general.navigation.about'|trans }},
+                </a>
+                <a
+                        href="{{ path('visitor.work.listing') }}"
+                        {% if app.request.attributes.get( '_route' ) starts with 'visitor.work' %}
+                            class="active-link"
+                        {% endif %}
+                >
+                    {{ 'baileythedino.general.navigation.work'|trans }},
+                </a>
+                <a
+                        href="{{ path('visitor.blog.listing') }}"
+                        {% if app.request.attributes.get( '_route' ) starts with 'visitor.blog' %}
+                            class="active-link"
+                        {% endif %}
+                >
+                    {{ 'baileythedino.general.navigation.blog'|trans }},
+                </a>
+                <a
+                        href="mailto:baileylievens@hotmail.com"
+                >
+                    {{ 'baileythedino.general.navigation.contact'|trans }}
+                </a>
             </div>
         </div>
 

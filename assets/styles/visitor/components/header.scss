@@ -17,6 +17,10 @@ nav {
     &:hover {
       text-decoration: line-through;
     }
+
+    &.active-link {
+      text-decoration: line-through;
+    }
   }
 
   .desktop-links {
