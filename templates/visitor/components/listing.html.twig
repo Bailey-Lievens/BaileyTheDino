@@ -1,0 +1,32 @@
+{# var array listingCollections #}
+
+{% block listing_outer %}
+    <section class="folders-container">
+
+        {% for name, collection in listingCollections %}
+            <div class="folder-wrapper">
+                <div class="folder-info file-hover">
+                    <img class="folder-closed" src="{{ asset('build/images/listing/folder-closed.svg') }}" alt="Folder icon">
+                    <img class="folder-open" src="{{ asset('build/images/listing/folder-open.svg') }}" alt="Folder icon">
+                    <p class="folder-title">{{ name }}</p>
+                </div>
+
+                <div class="posts-wrapper">
+
+                    {% for listingItem in collection %}
+
+                        {% block listing_individual_item %}
+                            <a href="#" class="post-wrapper file-hover">
+                                <img src="{{ asset('build/images/listing/file.svg') }}" alt="Text file icon">
+                                <p class="post-title">{{ listingItem.title }}</p>
+                            </a>
+                        {% endblock %}
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        {% endfor %}
+
+    </section>
+{% endblock %}

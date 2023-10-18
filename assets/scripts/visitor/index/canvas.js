@@ -2,55 +2,59 @@ import html2canvas from "html2canvas";
 
 // Canvas
 let canvas = document.getElementById('canvas');
-let canvasContext = canvas.getContext("2d");
 
-canvasContext.canvas.width = window.innerWidth;
-canvasContext.canvas.height = window.innerHeight;
+if (canvas) {
+
+    let canvasContext = canvas.getContext("2d");
+
+    canvasContext.canvas.width = window.innerWidth;
+    canvasContext.canvas.height = window.innerHeight;
 
 // Mouse and brush settings
-let mouseCoordinates = {x:0, y:0};
+    let mouseCoordinates = {x:0, y:0};
 
-let brushColor = window.getComputedStyle(document.querySelector('a')).color;
-let eraserColor = window.getComputedStyle(document.body).backgroundColor;
+    let brushColor = window.getComputedStyle(document.querySelector('a')).color;
+    let eraserColor = window.getComputedStyle(document.body).backgroundColor;
 
-let brushSizes = {small: 5, medium: 15, big: 30};
-let brushSettings = {size: brushSizes.medium, color: brushColor, linecap:"round"};
+    let brushSizes = {small: 5, medium: 15, big: 30};
+    let brushSettings = {size: brushSizes.medium, color: brushColor, linecap:"round"};
 
 // Icons
-let trashCan = document.getElementById("trash-icon");
+    let trashCan = document.getElementById("trash-icon");
 
-let smallBrush = document.getElementById("small-icon");
-let mediumBrush = document.getElementById("medium-icon");
-let bigBrush = document.getElementById("big-icon");
+    let smallBrush = document.getElementById("small-icon");
+    let mediumBrush = document.getElementById("medium-icon");
+    let bigBrush = document.getElementById("big-icon");
 
-let brush = document.getElementById("brush-icon");
-let eraser = document.getElementById("eraser-icon");
-let save = document.getElementById("save-icon");
+    let brush = document.getElementById("brush-icon");
+    let eraser = document.getElementById("eraser-icon");
+    let save = document.getElementById("save-icon");
 
 // Other vars
-let colorInput = "";
-let filenames = ["artpiece", "masterpiece", "art", "my_first_design", "look_mom", "illustration", "finalfinalFinal_v3"];
+    let colorInput = "";
+    let filenames = ["artpiece", "masterpiece", "art", "my_first_design", "look_mom", "illustration", "finalfinalFinal_v3"];
 
 // Event listeners
-document.addEventListener("mouseup", stopBrush);
-document.addEventListener("mousedown", startBrush);
+    document.addEventListener("mouseup", stopBrush);
+    document.addEventListener("mousedown", startBrush);
 
-document.addEventListener("touchstart", startBrush);
-document.addEventListener("touchend", stopBrush);
+    document.addEventListener("touchstart", startBrush);
+    document.addEventListener("touchend", stopBrush);
 
-document.addEventListener("keydown", keyboardPress);
+    document.addEventListener("keydown", keyboardPress);
 
-window.addEventListener("resize", resize);
+    window.addEventListener("resize", resize);
 
-trashCan.addEventListener("click", clearCanvas);
+    trashCan.addEventListener("click", clearCanvas);
 
-smallBrush.addEventListener("click", changeBrushSize);
-mediumBrush.addEventListener("click", changeBrushSize);
-bigBrush.addEventListener("click", changeBrushSize);
+    smallBrush.addEventListener("click", changeBrushSize);
+    mediumBrush.addEventListener("click", changeBrushSize);
+    bigBrush.addEventListener("click", changeBrushSize);
 
-brush.addEventListener("click", changeOption);
-eraser.addEventListener("click", changeOption);
-save.addEventListener("click", saveScreen);
+    brush.addEventListener("click", changeOption);
+    eraser.addEventListener("click", changeOption);
+    save.addEventListener("click", saveScreen);
+}
 
 function updateMouseCoords(e) {
     try {

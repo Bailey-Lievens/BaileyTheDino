@@ -4,7 +4,9 @@ let hamburger2 = document.querySelector(".hamburger-2");
 let navigationLinks = document.querySelector(".mobile-navigation-links");
 let menuOpen = false;
 
-hamburgerWrapper.addEventListener("click", hamburgerClick);
+if (hamburgerWrapper) {
+    hamburgerWrapper.addEventListener("click", hamburgerClick);
+}
 
 function hamburgerClick() {
     if (menuOpen) {
