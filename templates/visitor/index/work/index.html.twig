@@ -1,4 +1,8 @@
-{% include 'visitor/base.html.twig' %}
+{% extends 'visitor/base.html.twig' %}
+
+{% block title %}
+    {{ 'baileythedino.work.pageTitle'|trans }}
+{% endblock %}
 
 {% block body %}
     {% include 'visitor/components/header.html.twig' %}
