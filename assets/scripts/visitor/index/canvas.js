@@ -4,35 +4,34 @@ import html2canvas from "html2canvas";
 let canvas = document.getElementById('canvas');
 
 if (canvas) {
-
-    let canvasContext = canvas.getContext("2d");
+    var canvasContext = canvas.getContext("2d");
 
     canvasContext.canvas.width = window.innerWidth;
     canvasContext.canvas.height = window.innerHeight;
 
 // Mouse and brush settings
-    let mouseCoordinates = {x:0, y:0};
+    var mouseCoordinates = {x:0, y:0};
 
-    let brushColor = window.getComputedStyle(document.querySelector('a')).color;
-    let eraserColor = window.getComputedStyle(document.body).backgroundColor;
+    var brushColor = window.getComputedStyle(document.querySelector('a')).color;
+    var eraserColor = window.getComputedStyle(document.body).backgroundColor;
 
-    let brushSizes = {small: 5, medium: 15, big: 30};
-    let brushSettings = {size: brushSizes.medium, color: brushColor, linecap:"round"};
+    var brushSizes = {small: 5, medium: 15, big: 30};
+    var brushSettings = {size: brushSizes.medium, color: brushColor, linecap:"round"};
 
 // Icons
-    let trashCan = document.getElementById("trash-icon");
+    var trashCan = document.getElementById("trash-icon");
 
-    let smallBrush = document.getElementById("small-icon");
-    let mediumBrush = document.getElementById("medium-icon");
-    let bigBrush = document.getElementById("big-icon");
+    var smallBrush = document.getElementById("small-icon");
+    var mediumBrush = document.getElementById("medium-icon");
+    var bigBrush = document.getElementById("big-icon");
 
-    let brush = document.getElementById("brush-icon");
-    let eraser = document.getElementById("eraser-icon");
-    let save = document.getElementById("save-icon");
+    var brush = document.getElementById("brush-icon");
+    var eraser = document.getElementById("eraser-icon");
+    var save = document.getElementById("save-icon");
 
 // Other vars
-    let colorInput = "";
-    let filenames = ["artpiece", "masterpiece", "art", "my_first_design", "look_mom", "illustration", "finalfinalFinal_v3"];
+    var colorInput = "";
+    var filenames = ["artpiece", "masterpiece", "art", "my_first_design", "look_mom", "illustration", "finalfinalFinal_v3"];
 
 // Event listeners
     document.addEventListener("mouseup", stopBrush);
