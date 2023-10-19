@@ -7,5 +7,8 @@
 {% block body %}
     {% include 'visitor/components/header.html.twig' %}
 
-    Hello work
+    {% include 'visitor/components/listing.html.twig' with {
+        listingCollections: page.workCollections
+    } %}
+
 {% endblock %}
