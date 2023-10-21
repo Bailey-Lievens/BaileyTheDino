@@ -1,0 +1,11 @@
+{#
+    @var string title
+    @var enum position
+            left|center|right
+#}
+
+{% block title %}
+    <section class="title title-{{ position }}">
+        {{ title }}
+    </section>
+{% endblock %}

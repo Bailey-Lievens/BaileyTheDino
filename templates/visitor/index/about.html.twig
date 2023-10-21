@@ -7,7 +7,10 @@
 {% block body %}
     {% include 'visitor/components/header.html.twig' %}
 
-    <section>
-        Hello me
-    </section>
+    {% include 'visitor/components/content-page-blocks/three-dimensional-banner.html.twig' %}
+
+    {% include 'visitor/components/content-page-blocks/title.html.twig' with {
+        title: 'Pretty cool huh?',
+        position: 'center'
+    } %}
 {% endblock %}
