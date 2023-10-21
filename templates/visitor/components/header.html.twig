@@ -1,7 +1,7 @@
 {% block header %}
 
     {% set currentRoute = app.request.attributes.get('_route') %}
-    <nav>
+    <nav {{ stimulus_controller('navigation') }}>
         <div class="logo">
             <a href="{{ path('visitor.index') }}">{{ 'baileythedino.general.websiteName'|trans }}</a>
         </div>

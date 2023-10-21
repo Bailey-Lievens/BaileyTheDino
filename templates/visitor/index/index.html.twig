@@ -7,7 +7,7 @@
 {% block body %}
     {% include 'visitor/components/header.html.twig' %}
 
-    <div class="canvas-wrapper">
+    <div class="canvas-wrapper" {{ stimulus_controller('index_canvas') }}>
         <canvas id="canvas"></canvas>
     </div>
 

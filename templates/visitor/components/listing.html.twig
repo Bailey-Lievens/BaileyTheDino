@@ -4,7 +4,7 @@
     <section class="folders-container">
 
         {% for name, collection in listingCollections %}
-            <div class="folder-wrapper">
+            <div class="folder-wrapper" {{ stimulus_controller('map') }}>
                 <div class="folder-info file-hover">
                     <img class="folder-closed" src="{{ asset('build/images/listing/folder-closed.svg') }}" alt="Folder icon">
                     <img class="folder-open" src="{{ asset('build/images/listing/folder-open.svg') }}" alt="Folder icon">
