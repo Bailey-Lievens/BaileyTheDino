@@ -22,9 +22,5 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
-    },
-    "dependencies": {
-        "html2canvas": "^1.4.1",
-        "three": "^0.157.0"
     }
 }

@@ -1,3 +1,4 @@
+// Roboto
 @font-face {
   font-family: 'Roboto';
   src: url('./fonts/Roboto/Roboto-Light.woff2') format('woff2'),
@@ -103,5 +104,15 @@
   url('./fonts/Roboto/Roboto-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
+}
+
+// Racing Sans One
+@font-face {
+  font-family: 'Racing Sans One';
+  src: url('./fonts/RacingSansOne/RacingSansOne-Regular.woff2') format('woff2'),
+  url('./fonts/RacingSansOne/RacingSansOne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }

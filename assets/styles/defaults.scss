@@ -3,7 +3,7 @@ a {
 }
 
 * {
-  color: $offBlack;
+  color: $charcoalBlack;
   font-family: $mainFont;
 
   box-sizing: border-box;
@@ -18,14 +18,18 @@ a {
 }
 
 ::selection {
-  background-color: $offBlack;
-  color: $offWhite;
+  background-color: $charcoalBlack;
+  color: $paleWhite;
 }
 
 html, body {
-  background-color: $offWhite;
+  background-color: $paleWhite;
 }
 
 section {
   margin: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $titleFont;
 }

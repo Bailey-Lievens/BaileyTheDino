@@ -1,6 +1,7 @@
-# Portfolio project 2023 in Symfony
+# Portfolio project
 
-Just my portfolio remade in Symfony this time. (For the fifth time or so)
+Just my portfolio remade in Symfony this time. (For the fifth time or so).
+Started in 2023.
 
 ## Setup
 
