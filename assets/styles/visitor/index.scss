@@ -1,0 +1,172 @@
+.hero-header {
+  background-color: $vibeYellow;
+
+  position: relative; // This way the background circles can use absolute within the background
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+overflow: hidden;
+
+  height: 80vh;
+  max-height: 800px; // Big screens KekW
+
+  * {
+    color: $paleWhite;
+    text-shadow: $defaultTextShadow;
+  }
+
+  .hero-header--inner {
+
+    height: 100%;
+    display: grid;
+
+    z-index: 200;
+
+    margin: clamp(50px, 20%, 100px) 0;
+
+    .hero-header--title-wrapper {
+
+      align-self: center;
+
+      @media (min-width: $tabletBreakPoint) {
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 60px;
+      }
+
+      h1 {
+        font-size: 6rem;
+        line-height: 100px;
+
+        // I felt so smart when I did the formatting like this
+        br {
+          display: block;
+          @media (min-width: $tabletBreakPoint) {
+            display: none;
+          }
+        }
+      }
+
+      h2 {
+        font-size: .8rem;
+        position: relative;
+        top: -15px;
+      }
+
+    }
+
+    .hero-header--scroll-down-wrapper {
+
+      align-self: flex-end;
+      justify-self: flex-end;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: .7rem;
+
+      img {
+        width: 30px;
+        position: relative;
+
+        animation: bobbing .25s alternate linear infinite;
+        animation-play-state: paused;
+      }
+
+      &:hover {
+        img {
+          animation-play-state: running;
+        }
+      }
+
+      p {
+        text-decoration: underline;
+        line-height: 20px;
+        text-shadow: $smallTextShadow;
+      }
+
+    }
+  }
+
+  .hero-header--decorative-circles {
+    .decorative-circle {
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      background-color: darken($vibeYellow, 2);
+
+      width: 50px;
+
+      z-index: 100;
+
+      -webkit-box-shadow: inset -1px 2px 5px -3px rgba(30,24,10,.2);
+      -moz-box-shadow: inset -1px 2px 5px -3px rgba(30,24,10,.2);
+      box-shadow: inset -1px 2px 5px -3px rgba(30,24,10,.2);
+
+      position: absolute;
+    }
+
+    .circle-1 {
+      width: 200px;
+
+      top: -100px;
+      left: -75px;
+    }
+
+    .circle-2 {
+      width: 125px;
+
+      bottom: 0;
+      right: 7px;
+    }
+
+    .circle-3 {
+      width: 40px;
+
+      left: 60%;
+      top: 60px;
+    }
+
+    .circle-4 {
+      width: 300px;
+
+      left: 60%;
+      top: 60px;
+    }
+
+    .circle-5 {
+      display: none;
+
+      @media (min-width: $tabletBreakPoint) {
+        display: block;
+      }
+
+
+      width: 250px;
+
+      left: 5%;
+      bottom: 10px;
+    }
+
+  }
+}
+
+@keyframes bobbing {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: 5px;
+  }
+}
+
+.hero-header--drooping {
+  width: 100vw;
+  overflow: hidden;
+
+  display: flex;
+}

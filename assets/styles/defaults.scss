@@ -1,10 +1,14 @@
-a {
+a, button {
+  background-color: unset;
+  font-family: $titleFont;
+  border: unset;
+  cursor: pointer;
+  font-weight: unset;
   text-decoration: none;
 }
 
 * {
   color: $charcoalBlack;
-  font-family: $mainFont;
 
   box-sizing: border-box;
 
@@ -26,10 +30,12 @@ html, body {
   background-color: $paleWhite;
 }
 
-section {
-  margin: 1rem;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $titleFont;
+  font-weight: unset;
+}
+
+.container {
+  max-width: $containerWidth;
+  width: 100%;
 }

@@ -5,5 +5,45 @@
 {% endblock %}
 
 {% block body %}
-    Hello me
+
+    {# Start header #}
+    {% block hero_header %}
+        <section class="hero-header">
+
+            <section class="hero-header--inner container">
+                <div class="hero-header--title-wrapper">
+                    <h1>Bailey<br>The<br>Dino</h1>
+                    <h2>In collaboration with Zoro</h2>
+                </div>
+
+                <a href="#" class="hero-header--scroll-down-wrapper">
+                    <img src="{{ asset('build/images/icons/hand-pointing-down.svg') }}" role="presentation" alt="">
+                    <p>Head on down</p>
+                </a>
+            </section>
+
+            <div class="hero-header--decorative-circles">
+                <div class="decorative-circle circle-1"></div>
+                <div class="decorative-circle circle-2"></div>
+                <div class="decorative-circle circle-3"></div>
+                <div class="decorative-circle circle-4"></div>
+                <div class="decorative-circle circle-5"></div>
+            </div>
+
+            <div class="hero-header--decorative-pills">
+
+            </div>
+
+        </section>
+        <div class="hero-header--drooping">
+            {# In case somebody as a very very very very wide screen lol #}
+            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation"  alt="">
+            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
+            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
+            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
+            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
+        </div>
+    {% endblock %}
+    {# End header #}
+
 {% endblock %}

@@ -4,5 +4,12 @@ $hotPink: #FF5C94;
 $cloudBlue: #4DD6FF;
 $vibeYellow: #FFD25D;
 
+$defaultTextShadow: 0px 2px 2px rgba(30, 24, 10, 0.35);
+$smallTextShadow: 0px 1px 1px rgba(30, 24, 10, 0.35);
+
 $titleFont: "Racing Sans One";
 $mainFont: "Roboto";
+
+$containerWidth: clamp(280px, 70vw, 1000px); // Wide screens be like
+
+$tabletBreakPoint: 900px;
