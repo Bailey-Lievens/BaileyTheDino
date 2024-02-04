@@ -8,14 +8,14 @@
   align-items: center;
   justify-content: center;
 
-overflow: hidden;
+  overflow: hidden;
 
   height: 80vh;
   max-height: 800px; // Big screens KekW
 
   * {
     color: $paleWhite;
-    text-shadow: $defaultTextShadow;
+    text-shadow: $defaultShadow;
   }
 
   .hero-header--inner {
@@ -30,6 +30,9 @@ overflow: hidden;
     .hero-header--title-wrapper {
 
       align-self: center;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
 
       @media (min-width: $tabletBreakPoint) {
         margin-left: auto;
@@ -75,18 +78,34 @@ overflow: hidden;
 
         animation: bobbing .25s alternate linear infinite;
         animation-play-state: paused;
+
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
       }
 
-      &:hover {
+      &:hover, &:focus {
         img {
           animation-play-state: running;
         }
       }
 
       p {
+        position: relative;
         text-decoration: underline;
+        transition: ease-in-out .05s;
+        top: 0;
         line-height: 20px;
-        text-shadow: $smallTextShadow;
+        text-shadow: $smallShadow;
+      }
+
+      &:active {
+        p {
+          position: relative;
+          top: 1px;
+        }
       }
 
     }
@@ -102,9 +121,9 @@ overflow: hidden;
 
       z-index: 100;
 
-      -webkit-box-shadow: inset -1px 2px 5px -3px rgba(30,24,10,.2);
-      -moz-box-shadow: inset -1px 2px 5px -3px rgba(30,24,10,.2);
-      box-shadow: inset -1px 2px 5px -3px rgba(30,24,10,.2);
+      -webkit-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+      -moz-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+      box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
 
       position: absolute;
     }
@@ -152,6 +171,360 @@ overflow: hidden;
     }
 
   }
+
+  .hero-header--decorative-pills {
+    .pill-group {
+
+      * {
+        border-radius: 69696969px;
+        position: absolute;
+        z-index: 150;
+
+      }
+    }
+
+    .blue-pill-group {
+      .main-blue-pill {
+        background-color: $cloudBlue;
+        width: 450px;
+        height: 150px;
+
+        transform: rotate(-25deg);
+
+        left: -300px;
+        top: 113px;
+
+        box-shadow: $defaultShadow;
+
+        @media (min-width: $tabletBreakPoint) {
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 500px;
+        }
+
+        overflow: hidden;
+
+        .blue-inner-circle {
+          background-color: darken($cloudBlue, 2);
+          width: 20px;
+          aspect-ratio: 1/1;
+          position: absolute;
+          top: 0;
+          left: 100px;
+
+          -webkit-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+          -moz-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+          box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+        }
+
+        .circle-1 {
+          width: 70px;
+          right: 40px;
+          left: unset;
+          top: 20px;
+        }
+
+        .circle-2 {
+          right: 85px;
+          left: unset;
+          top: 100px;
+        }
+
+        .circle-3 {
+          width: 40px;
+          left: 55px;
+          top: 90px;
+        }
+
+        .circle-4 {
+          width: 25px;
+          left: 80px;
+          top: 30px;
+        }
+
+        .circle-5 {
+          width: 30px;
+          left: 200px;
+          top: 70px;
+        }
+      }
+
+      .blue-pill-fleet {
+        visibility: hidden;
+        transform: rotate(-25deg);
+        margin-left: auto;
+        margin-right: auto;
+
+        top: 130px;
+        left: 0;
+        right: 840px;
+
+        width: fit-content;
+
+        @media (min-width: $tabletBreakPoint) {
+          visibility: visible;
+        }
+
+        * {
+          background-color: $cloudBlue;
+          width: 50px;
+          aspect-ratio: 3/1;
+
+          box-shadow: $defaultShadow;
+
+          position: absolute;
+          top: 0;
+        }
+
+        .blue-pill-1 {
+          left: -30px;
+          top: 22px;
+        }
+
+        .blue-pill-3 {
+          left: 30px;
+          top: 22px;
+        }
+      }
+
+      .pink-pill-fleet {
+        visibility: hidden;
+        transform: rotate(-25deg);
+        margin-left: auto;
+        margin-right: auto;
+
+        top: 200px;
+        left: 0;
+        right: 230px;
+
+        width: fit-content;
+
+        @media (min-width: $tabletBreakPoint) {
+          visibility: visible;
+        }
+
+        * {
+          background-color: $hotPink;
+          width: 50px;
+          aspect-ratio: 3/1;
+
+          box-shadow: $defaultShadow;
+
+          position: absolute;
+          top: 0;
+        }
+
+        .pink-pill-1 {
+          left: -30px;
+          top: 22px;
+        }
+
+        .pink-pill-3 {
+          left: 30px;
+          top: 22px;
+        }
+      }
+    }
+
+    .pink-pill-group {
+      .main-pink-pill {
+        background-color: $hotPink;
+        width: 600px;
+        height: 210px;
+
+        transform: rotate(-25deg);
+
+        right: -365px;
+        bottom: 140px;
+
+        box-shadow: $defaultShadow;
+
+        @media (min-width: $tabletBreakPoint) {
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: -765px;
+          bottom: 320px;
+        }
+
+        overflow: hidden;
+
+        .pink-inner-circle {
+          background-color: darken($hotPink, 1);
+          width: 20px;
+          aspect-ratio: 1/1;
+          position: absolute;
+          top: 0;
+          left: 100px;
+
+          -webkit-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+          -moz-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+          box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+        }
+
+        .circle-1 {
+          width: 70px;
+          right: 40px;
+          left: unset;
+          top: 20px;
+        }
+
+        .circle-2 {
+          right: 105px;
+          left: unset;
+          top: 130px;
+          width: 50px;
+        }
+
+        .circle-3 {
+          width: 180px;
+          left: -65px;
+          top: 127px;
+        }
+
+        .circle-4 {
+          width: 40px;
+          left: 115px;
+          top: 50px;
+        }
+
+        .circle-5 {
+          width: 115px;
+          left: 275px;
+          top: 40px;
+        }
+      }
+
+      .pink-pill-fleet {
+        visibility: hidden;
+        transform: rotate(-25deg);
+        margin-left: auto;
+        margin-right: auto;
+
+        top: 515px;
+        left: 0;
+        right: -915px;
+
+        width: fit-content;
+
+        @media (min-width: $tabletBreakPoint) {
+          visibility: visible;
+        }
+
+        * {
+          background-color: $hotPink;
+          width: 70px;
+          aspect-ratio: 3/1;
+
+          box-shadow: $defaultShadow;
+
+          position: absolute;
+          top: 0;
+        }
+
+        .pink-pill-1 {
+          left: -50px;
+          top: -35px;
+        }
+
+        .pink-pill-3 {
+          left: 50px;
+          top: -35px;
+        }
+      }
+    }
+
+    .white-pill-group {
+      .main-white-pill {
+        background-color: $paleWhite;
+        width: 300px;
+        height: 125px;
+
+        transform: rotate(-25deg);
+
+        left: -180px;
+        bottom: 150px;
+
+        box-shadow: $defaultShadow;
+
+        @media (min-width: $tabletBreakPoint) {
+          margin-left: auto;
+          margin-right: auto;
+          left: -375px;
+          right: 0;
+          bottom: 120px;
+        }
+
+        overflow: hidden;
+
+        .white-inner-circle {
+          background-color: darken($paleWhite, 1);
+          width: 20px;
+          aspect-ratio: 1/1;
+          position: absolute;
+          top: 0;
+          left: 100px;
+
+          -webkit-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+          -moz-box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+          box-shadow: inset -1px 2px 5px -3px rgba(30, 24, 10, .2);
+        }
+
+        .circle-1 {
+          width: 70px;
+          right: 40px;
+          left: unset;
+          top: 20px;
+        }
+
+        .circle-2 {
+          right: unset;
+          left: 50px;
+          top: 90px;
+          width: 50px;
+        }
+      }
+
+      .white-pill-fleet {
+        visibility: hidden;
+        transform: rotate(-25deg);
+        margin-left: auto;
+        margin-right: auto;
+
+        top: 600px;
+        left: 0;
+        right: 10px;
+
+        width: fit-content;
+
+        @media (min-width: $tabletBreakPoint) {
+          visibility: visible;
+        }
+
+        * {
+          background-color: $paleWhite;
+          width: 60px;
+          aspect-ratio: 3/1;
+
+          box-shadow: $defaultShadow;
+
+          position: absolute;
+          top: 0;
+        }
+
+        .white-pill-1 {
+          left: -20px;
+          top: -20px;
+        }
+
+        .white-pill-2 {
+          top: 20px;
+          left: -80px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes bobbing {
@@ -166,6 +539,8 @@ overflow: hidden;
 
 .hero-header--drooping {
   width: 100vw;
+  max-width: 100%;
+  height: 140px;
   overflow: hidden;
 
   display: flex;

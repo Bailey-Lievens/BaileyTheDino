@@ -2,9 +2,13 @@ a, button {
   background-color: unset;
   font-family: $titleFont;
   border: unset;
-  cursor: pointer;
+  cursor: url("../images/icons/cursor/cursor-pointer.png"), auto;
   font-weight: unset;
   text-decoration: none;
+  
+  &:active {
+    cursor: url("../images/icons/cursor/cursor-clicked.png"), auto;
+  }
 }
 
 * {
@@ -28,6 +32,8 @@ a, button {
 
 html, body {
   background-color: $paleWhite;
+
+  cursor: url("../images/icons/cursor/cursor-standard.png"), auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
