@@ -16,7 +16,7 @@
                     <h2>{{ 'baileythedino.index.header.subText'|trans }}</h2>
                 </div>
 
-                <a href="#" class="hero-header--scroll-down-wrapper">
+                <a href="#middleTextHeader" class="hero-header--scroll-down-wrapper">
                     <img src="{{ asset('build/images/icons/hand-pointing-down.png') }}" role="presentation" alt="">
                     <p>{{ 'baileythedino.index.header.scrollDown'|trans }}</p>
                 </a>
@@ -85,7 +85,7 @@
         </section>
         <div class="hero-header--drooping">
             {# In case somebody as a very very very very wide screen lol #}
-            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation"  alt="">
+            <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
             <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
             <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
             <img src="{{ asset('build/images/elements/yellow-droop.svg') }}" role="presentation" alt="">
@@ -93,5 +93,100 @@
         </div>
     {% endblock %}
     {# End header #}
+
+    {# Start 2nd text #}
+    {% block middle_text %}
+        <section id="middleTextHeader" class="middle-text">
+            <section class="middle-text--inner container">
+                <h3>{{ 'baileythedino.index.middleText.text'|trans }}</h3>
+
+                <div class="blue-pill-fleet" data-controller="pill-parallax" data-parallax-speed="1.2">
+                    <div class="blue-pill-1"></div>
+                    <div class="blue-pill-2"></div>
+                    <div class="blue-pill-3"></div>
+                </div>
+            </section>
+        </section>
+    {% endblock %}
+    {# End 2nd text #}
+
+    {# Start content cta #}
+    {% block content_cta %}
+        <section class="content-cta">
+            <section class="content-cta--inner container">
+                <h4>{{ 'baileythedino.index.contentCta.title'|trans }}</h4>
+                <div>
+                    <a href="#">{{ 'baileythedino.index.contentCta.links.link-1'|trans }}</a>
+                    <a href="#">{{ 'baileythedino.index.contentCta.links.link-2'|trans }}</a>
+                    <a href="#">{{ 'baileythedino.index.contentCta.links.link-3'|trans }}</a>
+                    <a href="#">{{ 'baileythedino.index.contentCta.links.link-4'|trans }}</a>
+                    <a href="#">{{ 'baileythedino.index.contentCta.links.link-5'|trans }}</a>
+                    <a href="#">{{ 'baileythedino.index.contentCta.links.link-6'|trans }}</a>
+                </div>
+                <button onclick="(function(){alert('It really is');})();">
+                    {{ 'baileythedino.index.contentCta.footNote'|trans }}
+                </button>
+
+                <div class="content-cta--decorative-circles">
+                    <div class="decorative-circle circle-1"></div>
+                    <div class="decorative-circle circle-2"></div>
+                    <div class="decorative-circle circle-3"></div>
+                    <div class="decorative-circle circle-4"></div>
+                    <div class="decorative-circle circle-5"></div>
+                </div>
+
+                <div class="pink-pill-fleet" data-controller="pill-parallax" data-parallax-speed="1.2">
+                    <div class="pink-pill-1"></div>
+                    <div class="pink-pill-2"></div>
+                    <div class="pink-pill-3"></div>
+                </div>
+
+                <div class="white-pill-fleet" data-controller="pill-parallax" data-parallax-speed="1.2">
+                    <div class="white-pill-1"></div>
+                    <div class="white-pill-2"></div>
+                    <div class="white-pill-3"></div>
+                </div>
+            </section>
+        </section>
+    {% endblock %}
+    {# End content cta #}
+
+    {# Start project showcase #}
+    {% block project_showcase %}
+        <section class="project-showcase">
+            <section class="project-showcase--inner container">
+                <div class="title-container">
+                    <h4>{{ 'baileythedino.index.projectShowcase.title'|trans }}</h4>
+                    <p>{{ 'baileythedino.index.projectShowcase.subTitle'|trans }}</p>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-item project-1"></div>
+                    <div class="project-item project-2"></div>
+                    <div class="project-item project-3"></div>
+                    <div class="project-item project-4"></div>
+                    <div class="project-item project-5"></div>
+                    <div class="project-item project-6"></div>
+                    <div class="project-item project-7"></div>
+                    <div class="project-item project-8"></div>
+                    <div class="project-item project-9"></div>
+                    <div class="project-item project-10"></div>
+                    <div class="project-item project-11"></div>
+                    <div class="project-item project-12"></div>
+                    <div class="project-item project-13"></div>
+                    <div class="project-item project-14"></div>
+                    <div class="project-item project-15"></div>
+                    <div class="project-item project-16"></div>
+                    <div class="project-item project-17"></div>
+                    <div class="project-item project-18"></div>
+                    <div class="project-item project-19"></div>
+                    <div class="project-item project-20"></div>
+                    <div class="project-item project-21"></div>
+                    <div class="project-item project-22"></div>
+                </div>
+            </section>
+        </section>
+    {% endblock %}
+    {# End project showcase #}
 
 {% endblock %}
