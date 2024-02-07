@@ -963,7 +963,7 @@
     grid-row-gap: 10px;
 
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+    grid-template-rows: repeat(17, 1fr);
 
     width: 100%;
     max-width: 390px;
@@ -1190,8 +1190,12 @@
 .footer {
   background-color: $hotPink;
   overflow: hidden;
+  margin-top: 3rem;
 
-  margin-top: 12rem;
+
+  @media (min-width: $desktopBreakPoint) {
+    margin-top: 12rem;
+  }
 
   p {
     font-family: $titleFont;
@@ -1212,26 +1216,100 @@
 // Footer end
 
 // Quote start
-.footer {
-  background-color: $hotPink;
-  overflow: hidden;
+.quote {
+  position: relative;
 
-  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  * {
+    font-family: $titleFont;
+  }
+
+  .project-quote--inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    max-width: unset;
+  }
 
   p {
-    font-family: $titleFont;
-    color: darken($hotPink, 3);
-    font-size: 28.5vw;
-    user-select: none;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 1.25rem;
+    text-shadow: $smallShadow;
+
+    align-self: center;
+  }
+
+  .quote-slider {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    width: 100vw;
 
     position: relative;
 
+    overflow-x: hidden;
+
+    -webkit-scroll-behavior: unset;
+    -moz-scroll-behavior: unset;
+    -ms-scroll-behavior: unset;
+    scroll-behavior: unset;
+
+    cursor: url("../../images/icons/cursor/cursor-slide.png"), auto;
+
     @media (min-width: $desktopBreakPoint) {
-      left: -40px;
-      font-size: 30vw;
+      gap: 3rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
 
-    line-height: 17vw;
+    &.dragging {
+      cursor: url("../../images/icons/cursor/cursor-grab.png"), auto;
+    }
+
+    .quote-slide {
+      height: 40vw;
+      min-height: 300px;
+      width: 80vw;
+      min-width: 80vw;
+      transition: .2s ease-in-out;
+      border-radius: 10px;
+      overflow: hidden;
+
+      @media (min-width: $desktopBreakPoint) {
+        width: 700px;
+        min-width: 700px;
+        height: 500px;
+      }
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+    }
   }
 }
 // Quote end
