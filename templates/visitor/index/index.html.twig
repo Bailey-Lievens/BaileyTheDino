@@ -161,11 +161,21 @@
                 </div>
 
                 <div class="project-grid">
-                    <div class="project-item project-1"></div>
+                    <a href="#" class="project-item project-1">
+                        <div class="project-title-wrapper">
+                            <p>Bucket list</p>
+                        </div>
+                        <img src="{{ asset('build/images/thumbnails/projects/project-1.jpg') }}" alt="Bucket list">
+                    </a>
                     <div class="project-item project-2"></div>
                     <div class="project-item project-3"></div>
                     <div class="project-item project-4"></div>
-                    <div class="project-item project-5"></div>
+                    <a href="#" class="project-item project-5">
+                        <div class="project-title-wrapper">
+                            <p>Waves</p>
+                        </div>
+                        <img src="{{ asset('build/images/thumbnails/projects/project-2.jpg') }}" alt="Waves">
+                    </a>
                     <div class="project-item project-6"></div>
                     <div class="project-item project-7"></div>
                     <div class="project-item project-8"></div>
@@ -174,7 +184,12 @@
                     <div class="project-item project-11"></div>
                     <div class="project-item project-12"></div>
                     <div class="project-item project-13"></div>
-                    <div class="project-item project-14"></div>
+                    <a href="#" class="project-item project-14">
+                        <div class="project-title-wrapper">
+                            <p>Cliff</p>
+                        </div>
+                        <img src="{{ asset('build/images/thumbnails/projects/project-3.jpg') }}" alt="Cliff">
+                    </a>
                     <div class="project-item project-15"></div>
                     <div class="project-item project-16"></div>
                     <div class="project-item project-17"></div>
@@ -188,5 +203,27 @@
         </section>
     {% endblock %}
     {# End project showcase #}
+
+    {# Start footer #}
+    {% block footer %}
+        <section class="footer">
+            <p>{{ 'baileythedino.index.footer.title'|trans }}</p>
+        </section>
+    {% endblock %}
+    {# End footer #}
+
+    {# Start quote #}
+    {% block quote %}
+        <section class="quote">
+            <section class="project-quote--inner container">
+                <p>{{ 'baileythedino.index.quote.title'|trans }}</p>
+
+                <div class="quote-slider">
+
+                </div>
+            </section>
+        </section>
+    {% endblock %}
+    {# End quote #}
 
 {% endblock %}

@@ -987,6 +987,7 @@
       border-radius: 10px;
 
       transition: ease-in-out .2s;
+      padding: 7px;
 
       &:hover {
         scale: 1.04;
@@ -994,6 +995,25 @@
 
       &:active {
         scale: .9;
+      }
+
+      .project-title-wrapper {
+        position: absolute;
+        font-family: $titleFont;
+        text-shadow: $smallShadow;
+        padding: 5px 10px;
+
+        * {
+          color: $paleWhite;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
       }
     }
 
@@ -1165,4 +1185,53 @@
     }
   }
 }
-// Project shozcqse end
+// Project showcase end
+// Footer start
+.footer {
+  background-color: $hotPink;
+  overflow: hidden;
+
+  margin-top: 12rem;
+
+  p {
+    font-family: $titleFont;
+    color: darken($hotPink, 3);
+    font-size: 28.5vw;
+    user-select: none;
+
+    position: relative;
+
+    @media (min-width: $desktopBreakPoint) {
+      left: -40px;
+      font-size: 30vw;
+    }
+
+    line-height: 17vw;
+  }
+}
+// Footer end
+
+// Quote start
+.footer {
+  background-color: $hotPink;
+  overflow: hidden;
+
+  margin-top: 12rem;
+
+  p {
+    font-family: $titleFont;
+    color: darken($hotPink, 3);
+    font-size: 28.5vw;
+    user-select: none;
+
+    position: relative;
+
+    @media (min-width: $desktopBreakPoint) {
+      left: -40px;
+      font-size: 30vw;
+    }
+
+    line-height: 17vw;
+  }
+}
+// Quote end

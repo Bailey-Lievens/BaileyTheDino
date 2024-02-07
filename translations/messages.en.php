@@ -31,6 +31,12 @@ return [
                 'title' => 'Some fan favorites',
                 'subTitle' => 'The fan being my cat, Zoro 🐈‍⬛'
             ],
+            'footer' => [
+                'title' => 'FOOTER'
+            ],
+            'quote' => [
+                'title' => 'You found the secret quote area!'
+            ]
         ],
     ],
 ];
