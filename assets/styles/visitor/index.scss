@@ -1184,6 +1184,92 @@
       }
     }
   }
+
+  .yellow-pill-fleet {
+    position: absolute;
+    visibility: hidden;
+    transform: rotate(-25deg);
+    margin-left: auto;
+    margin-right: auto;
+
+    bottom: 200px;
+    left: -1200px;
+    right: 0;
+
+    width: fit-content;
+
+    z-index: 125;
+
+    @media (min-width: $tabletBreakPoint) {
+      visibility: visible;
+    }
+
+    * {
+      background-color: $vibeYellow;
+      width: 50px;
+      aspect-ratio: 3/1;
+
+      border-radius: 69696969px;
+
+      box-shadow: $defaultShadow;
+
+      position: absolute;
+      top: 0;
+    }
+
+    .yellow-pill-1 {
+      left: -30px;
+      top: 22px;
+    }
+
+    .yellow-pill-3 {
+      left: 30px;
+      top: 22px;
+    }
+  }
+
+  .blue-pill-fleet {
+    position: absolute;
+    visibility: hidden;
+    transform: rotate(-25deg);
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 70px;
+    right: -1100px;
+    left: 0;
+
+    width: fit-content;
+
+    z-index: 125;
+
+    @media (min-width: $tabletBreakPoint) {
+      visibility: visible;
+    }
+
+    * {
+      background-color: $cloudBlue;
+      width: 50px;
+      aspect-ratio: 3/1;
+
+      border-radius: 69696969px;
+
+      box-shadow: $defaultShadow;
+
+      position: absolute;
+      top: 0;
+    }
+
+    .blue-pill-1 {
+      left: -30px;
+      top: 22px;
+    }
+
+    .blue-pill-3 {
+      left: 30px;
+      top: 22px;
+    }
+  }
 }
 // Project showcase end
 // Footer start
